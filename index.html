@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChoroAI Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-cyan': '#00f6ff',
+                        'brand-purple': '#6d28d9',
+                    },
+                    keyframes: {
+                        'glow': {
+                            '0%, 100%': { boxShadow: '0 0 5px #00f6ff, 0 0 10px #00f6ff, 0 0 15px #00f6ff' },
+                            '50%': { boxShadow: '0 0 10px #00f6ff, 0 0 20px #00f6ff, 0 0 30px #00f6ff' },
+                        },
+                        'subtle-glow': {
+                          '0%, 100%': { boxShadow: '0 0 2px #00f6ff' },
+                          '50%': { boxShadow: '0 0 5px #00f6ff, 0 0 7px #00f6ff' },
+                        }
+                    },
+                    animation: {
+                        'glow': 'glow 2.5s ease-in-out infinite',
+                        'subtle-glow': 'subtle-glow 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@10.16.4/dist/framer-motion.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
